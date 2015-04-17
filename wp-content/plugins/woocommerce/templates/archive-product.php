@@ -17,6 +17,14 @@ get_header( 'shop' ); ?>
 
 <div class="body container">
 	<div class="row">
+
+	<div class="col-md-12 breadcurmb">
+			<div class="" id="breadcrumb">
+					<?php woocommerce_breadcrumb(); ?>
+			</div>
+	</div>
+
+
 	    <div class="col-md-9 rightnopadding">
 	    	<div class="pagebox">
 
@@ -32,7 +40,7 @@ get_header( 'shop' ); ?>
 
 						<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
-							<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
+							<h1 class="page-title categ-head"><?php woocommerce_page_title(); ?></h1>
 
 						<?php endif; ?>
 
@@ -90,10 +98,19 @@ get_header( 'shop' ); ?>
 
 		<div class="col-md-3 leftnopadding">
 			<div class="rightside">
-				<h2 class="categ-head">Products Categories</h2>
-				<nav class="rightnav" role="navigation">
-	                <?php wp_nav_menu(array('menu'=> 'categories-nav'));?>
-	            </nav>
+				
+				<div class="catego">
+					<h2 class="categ-head">Products Categories</h2>
+					<nav class="rightnav" role="navigation">
+		                <?php wp_nav_menu(array('menu'=> 'categories-nav'));?>
+		            </nav>
+		        </div>
+
+		        <div class="toprated">
+		        	<h2 class="categ-head">Top reated Products</h2>
+		        	<?php echo do_shortcode('[featured_products per_page="4" columns="1"]');?>
+		        </div>
+
 	        </div>
 		</div>
 

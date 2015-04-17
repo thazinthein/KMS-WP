@@ -532,7 +532,7 @@ class WC_Product {
 	 * @return string
 	 */
 	public function single_add_to_cart_text() {
-		return apply_filters( 'woocommerce_product_single_add_to_cart_text', __( 'Add to enquiry', 'woocommerce' ), $this );
+		return apply_filters( 'woocommerce_product_single_add_to_cart_text', __( 'Enquiry', 'woocommerce' ), $this );
 	}
 
 	/**

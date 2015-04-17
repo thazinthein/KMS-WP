@@ -7,6 +7,14 @@
  get_header(); ?>
 <div class="body container">
 	<div class="row">
+
+			<div class="col-md-12 breadcurmb">
+					<div class="" id="breadcrumb">
+							<?php woocommerce_breadcrumb(); ?>
+					</div>
+			</div>
+
+
 	        <div class="col-md-9 rightnopadding">				
 				<div class="pagebox">
 
@@ -14,7 +22,7 @@
 							
 						<article class="post" id="post-<?php the_ID(); ?>">
 
-							<h2><?php the_title(); ?></h2>					
+							<h2 class="categ-head"><?php the_title(); ?></h2>					
 
 							<div class="entry">
 
@@ -32,13 +40,22 @@
 			</div>
 
 			<div class="col-md-3 leftnopadding">
-				<div class="rightside">
+			<div class="rightside">
+				
+				<div class="catego">
 					<h2 class="categ-head">Products Categories</h2>
 					<nav class="rightnav" role="navigation">
 		                <?php wp_nav_menu(array('menu'=> 'categories-nav'));?>
 		            </nav>
 		        </div>
-			</div>
+
+		        <div class="toprated">
+		        	<h2 class="categ-head">Top reated Products</h2>
+		        	<?php echo do_shortcode('[featured_products per_page="4" columns="1"]');?>
+		        </div>
+
+	        </div>
+		</div>
 
 
 	</div>
