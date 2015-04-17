@@ -6,26 +6,42 @@
  */
  get_header(); ?>
 <div class="body container">
-        <div class="col-md-12">
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					
-				<article class="post" id="post-<?php the_ID(); ?>">
+	<div class="row">
+	        <div class="col-md-9 rightnopadding">				
+				<div class="pagebox">
 
-					<h2><?php the_title(); ?></h2>					
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							
+						<article class="post" id="post-<?php the_ID(); ?>">
 
-					<div class="entry">
+							<h2><?php the_title(); ?></h2>					
 
-						<?php the_content(); ?>						
+							<div class="entry">
 
-					</div>
+								<?php the_content(); ?>						
 
-					<?php edit_post_link(__('Edit this entry','html5reset'), '<p>', '</p>'); ?>
+							</div>
 
-				</article>				
-				
+							<?php edit_post_link(__('Edit this entry','html5reset'), '<p>', '</p>'); ?>
 
-			<?php endwhile; endif; ?>
-		</div>
+						</article>				
+						
+					<?php endwhile; endif; ?>
+
+				</div>
+			</div>
+
+			<div class="col-md-3 leftnopadding">
+				<div class="rightside">
+					<h2 class="categ-head">Products Categories</h2>
+					<nav class="rightnav" role="navigation">
+		                <?php wp_nav_menu(array('menu'=> 'categories-nav'));?>
+		            </nav>
+		        </div>
+			</div>
+
+
+	</div>
 </div>
 
 

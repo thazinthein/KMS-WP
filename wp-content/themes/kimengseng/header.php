@@ -39,38 +39,79 @@
 
 	        <div class="top">
 	            <div class="container">
-	              <div class="col-md-12">
-	               
-	              </div>        
+	            	<div class="row">
+
+	            		<div class="col-md-9">
+	            			<div class="quote-wrapper">
+	            				<?php echo do_shortcode('[WooCommerceWooCartPro]'); ?>
+	            			</div>
+	            		</div>
+		            	
+		            	<div class="col-md-3">
+		               		
+		               		<div class="search-wrapper">
+					            <div class="search"> 
+					                <?php  
+						                if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('homepage-sidebar') ) :
+						                endif; 
+						            ?>
+						        </div>
+				            </div>
+
+		              	</div>   
+		            </div>     
 	            </div>
 	        </div>
 
 	        <div class="menu-contentwrap">
 	            <div class="menubg-wrap">
-	            <div class="container">
-	                
-	                <div class="col-md-4">
-	                    <div class="logo">
-	                    	<img src="<?php bloginfo('template_directory');?>/images/logo.png" class="img-responsive">
-	                    </div>
-	                </div>
+		            <div class="container">
+		                <div class="row">
+			                
+			                <div class="col-md-4">
+			                    <div class="logo">
+			                    	<a href="<?php echo get_option('home'); ?>/">
+			                    		<img src="<?php bloginfo('template_directory');?>/images/logo.png" class="img-responsive">
+			                    	</a>
+			                    </div>
+			                </div>
+			            
 
-	                <div class="col-md-8">
-	                    <div class="nav">
-	                      <nav>
-	                          <ul>
-	                            <li>Home</li>
-	                            <li>About Us</li>
-	                            <li>Products</li>
-	                            <li>Services</li>
-	                            <li>Gallery</li>
-	                            <li>Contact Us</li>
-	                          </ul>
-	                      </nav>
-	                    </div>
-	                </div> 
+			                <div class="col-md-8">
+			                    <div class="nav">
+			                      <nav>
+			                          	<div class="navbar navbar-default topnav" role="navigation">
+							                <div class="navbar-header">
+							                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							                    <span class="sr-only">Toggle navigation</span>
+							                    <span class="icon-bar"></span>
+							                    <span class="icon-bar"></span>
+							                    <span class="icon-bar"></span>
+							                  </button>
+							                  <a class="navbar-brand" href="#">Menu</a>
+							                </div>
+							                <div class="navbar-collapse collapse" role="navigation">
+							                   	<?php
+										            wp_nav_menu( array(
+										                'menu'              => 'topnav',
+										                'theme_location'    => 'primary',
+										                'depth'             => 2,
+										                'container'         => 'div',
+										                'container_class'   => 'collapse navbar-collapse',
+										        		'container_id'      => 'bs-example-navbar-collapse-1',
+										                'menu_class'        => 'nav navbar-nav',
+										                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+										                'walker'            => new wp_bootstrap_navwalker())
+										            );
+										        ?>	 
+							                </div>
+							            </div>
+			                      </nav>
+			                    </div>
+			                </div>
 
-	              </div>       
+			            </div>
+		            </div>       
 	            </div>             
 	        </div>
     			

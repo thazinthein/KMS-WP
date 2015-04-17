@@ -262,7 +262,7 @@ register_sidebar(array(
 
 function new_excerpt_more( $more ) 
     {
-    return '</br><a class="read-more btn btn-3 btn-3a update-btn" href="'. get_permalink( get_the_ID() ) . '">Read More</a>';
+    return '</br><a class="read-more" href="'. get_permalink( get_the_ID() ) . '">read more</a>';
     }
     add_filter( 'excerpt_more', 'new_excerpt_more' );
     function get_cat_slug($cat_id) 
@@ -290,7 +290,7 @@ function excerpt($limit) {
       } else {
         $excerpt = implode(" ",$excerpt);
       } 
-      $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt . '</br><a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Read More...</a>');
+      $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt . '</br><a class="readmore" href="'. get_permalink( get_the_ID() ) . '">read more...</a>');
       return $excerpt;
       
     }
@@ -440,5 +440,62 @@ $price = '<del>' . $saleprice . '</del> <ins>' . $price . '</ins>';
 }
 return $price;
 }
+
+
+
+class ik_walker extends Walker_Nav_Menu{    
+  //start of the sub menu wrap
+  function start_lvl(&$output, $depth) {
+    $output .= '<div class="drop">
+            <div class="holder">
+              <div class="container">
+                <ul class="list">';
+  }
+ 
+  //end of the sub menu wrap
+  function end_lvl(&$output, $depth) {
+    $output .= '
+          </ul>
+        </div>
+      </div>
+      <div class="bottom"></div>
+    </div>';
+  }
+ 
+  //add the description to the menu item output
+  function start_el(&$output, $item, $depth, $args) {
+    global $wp_query;
+    $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+ 
+    $class_names = $value = '';
+ 
+    $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+ 
+    $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
+    $class_names = ' class="' . esc_attr( $class_names ) . '"';
+ 
+    $output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
+ 
+    $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+    $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+    $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+    $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+ 
+    $item_output = $args->before;
+    $item_output .= '<a'. $attributes .'>';
+    $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+    if(strlen($item->description)>2){ $item_output .= '<br /><span class="sub">' . $item->description . '</span>'; }
+    $item_output .= '</a>';
+    $item_output .= $args->after;
+ 
+    $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+  }
+}
+
+// Register Custom Navigation Walker
+require_once('wp_bootstrap_navwalker.php');
+register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'goldenworld' ),
+) );
 
 ?>
