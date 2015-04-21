@@ -99,14 +99,13 @@ ol.commentlist li.thread-odd {}
 /* Themes styles!
 -------------------------------------------------------------------------------*/
 .top{
-	height: 75px;
+	min-height: 75px;
 	background: #fff;
 	padding-top: 15px;
 }
 
 .menu-contentwrap{
 	background: url('images/menu-bg.png') repeat-x;	
-	height: 103px;
 	z-index: -1;
 }
 
@@ -121,8 +120,7 @@ ol.commentlist li.thread-odd {}
 
 .menubg-wrap{
     background: url("images/header-menu.png") no-repeat scroll center top rgba(0, 0, 0, 0);
-    height: 126px;
-	z-index: 1;
+   	z-index: 1;
 }
 
 
@@ -130,6 +128,24 @@ ol.commentlist li.thread-odd {}
 	padding-top: 26px;
 	margin-left: 6em;
 }
+
+.gallery span.bwg_standart_thumb_spun1_0{
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.4)!important;
+	-moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.4)!important;
+	box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.4)!important;	
+}
+
+.pagebox #bwg_container1_0 span.bwg_standart_thumb_0{
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.4)!important;
+	-moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.4)!important;
+	box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.4)!important;
+}
+
+.pagebox #bwg_container1_0 span.bwg_standart_thumb_0{
+	margin: 10px!important;
+}
+
+#bwg_standart_thumbnails_0{min-width: 100%!important;}
 /******************Top Nav************************/
 /*
 .nav nav{
@@ -235,6 +251,8 @@ ol.commentlist li.thread-odd {}
     background: none!important;    
 }
 
+
+
 /******************Top Nav************************/
 
 
@@ -242,9 +260,10 @@ ol.commentlist li.thread-odd {}
 
 .sliderwrapper{
 	background: url('images/slider-bg.jpg') no-repeat;
-	width: 100%;
-	height: 590px;
-	margin: 0 auto;
+	width: 100%;	
+	/*height: 590px;
+	margin: 0 auto;*/
+	margin-top: -5px;
 	background-position: center;
 }
 
@@ -298,7 +317,6 @@ li.widget_product_search{
 
 .quote-wrapper a#festi-cart{
 	float: right;
-	min-width: 250px;
 }
 
 body a#festi-cart.festi-cart.festi-cart-customize{
@@ -459,6 +477,9 @@ body a#festi-cart.festi-cart.festi-cart-customize{
 	text-align: justify;
 }
 
+.trapezoid-wrapper,.parallelogram-wrapper{
+	height: auto!important;
+}
 /******************Trapezoid************************/
 
 .pagebox{
@@ -577,17 +598,87 @@ ul#menu-rightnav li a{
 
 /******************RightSide************************/
 
+
+
+/***********************Contact Form******************************/
+
+.address {
+	margin-top: 60px;
+	font-weight: bold;
+}
+
+.address .officeaddress{background: url(images/address.png) left top no-repeat;padding-left: 50px;min-height: 40px;}
+.address .phone{background: url(images/phone.png) left top no-repeat;padding-left: 50px;min-height: 40px;}
+.address .email{background: url(images/email.png) left top no-repeat;padding-left: 50px;min-height: 40px;}
+.address .fax{background: url(images/fax.png) left top no-repeat;padding-left: 50px;min-height: 40px;}
+
+.address h2{
+  	color: #cd0d07;
+	font-family: "Lato";
+	font-size: 18px;
+	font-weight: bold;
+	border-bottom: 2px solid #b7b7b7;
+	padding-bottom: 10px;
+}
+
+.contactform h2{
+	color: #cd0d07;
+	font-family: "Lato";
+	font-size: 18px;
+	font-weight: bold;
+	border-bottom: 2px solid #b7b7b7;
+	padding-bottom: 10px;
+}
+
+.contactform-wrapper{
+  width: 100%;
+  
+  height: auto;
+  
+}
+
+.contactform{  
+  width: 100%;
+  min-height: 550px;  
+  margin-top: 30px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 5px 7px 0px rgba(50, 50, 50, 0.47);
+  -moz-box-shadow:    0px 5px 7px 0px rgba(50, 50, 50, 0.47);
+  box-shadow:         0px 5px 7px 0px rgba(50, 50, 50, 0.47);
+  margin-bottom: 30px;
+  padding-left: 30px;
+}
+
+.contac-left{
+  border-right: 1px solid #eaeaea;
+  
+}
+
+.contac-right-address {
+  line-height: 38px;
+  
+}
+
+.contactform input[type="text"],.contactform input[type="email"],.contactform textarea{min-width: 80%! important;}
+.contactform input,.contactform textarea{background: #efefef;border: none; min-height: 30px;padding: 10px;}
+form#cntctfrm_contact_form div{min-height: 30px;}
+form.wpcf7-form p{margin-top: 10px;color: #797979;padding-bottom: 10px;}
+.contactform input[type="submit"]{background: #d8d8d8;background: linear-gradient(to bottom, rgba(156, 10, 5, 1) 0%, rgba(232, 15, 8, 1) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0); height: 30px;color: #fff;border-radius: 5px;}
+
+/***********************Contact Form******************************/
+
 /******************Footer************************/
 
 .footerwrap{
 	margin-top: 30px;
 	background:#eae9e9;
-	height: 280px;
+	min-height: 250px;
 }
 
 .footer-about ul,.footer-products ul{
 	margin-left: 0px;
 	padding-left: 0px;
+	position: relative;
 }
 
 .footer-about ul>li,.footer-products ul>li{
@@ -598,6 +689,7 @@ ul#menu-rightnav li a{
 	list-style-position: inside;
 	font-weight: bold;
 	font-family: "Lato";
+	position: relative;
 }
 
 .footermenu {
@@ -608,12 +700,14 @@ ul#menu-rightnav li a{
 .social ul{
 	margin-top: 30px;
 	border-top: 5px solid #d00d07;
+	position: relative;
 }
 
 .social ul>li{
 	display: inline-block;
 	list-style: none;
 	margin-top: -10px;
+	position: relative;
 }
 
 .copyright{

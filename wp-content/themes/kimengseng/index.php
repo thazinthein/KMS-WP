@@ -7,7 +7,7 @@
  get_header(); ?>
 
 	<div class="sliderwrapper">
-        
+        <?php echo do_shortcode('[layerslider id="1"]'); ?>
     </div>
 
     <div class="container">
@@ -22,7 +22,7 @@
 
 	    <div class="row">
 
-	        <div class="col-md-4 col-xs-4">
+	        <div class="col-md-4 col-xs-4 trapezoid-wrapper">
 	          <div class="trapezoid-wrap">
 	            <div class="trapezoid">
 	              <h2>Our Products</h2>
@@ -35,7 +35,7 @@
 	          </div>
 	        </div>
 
-	        <div class="col-md-3 col-xs-3">
+	        <div class="col-md-3 col-xs-3 parallelogram-wrapper">
 	          <div id="parallelogram">
 	            <h2>Our Services</h2>
 	            <ul>
@@ -47,7 +47,7 @@
 	          </div>
 	        </div>
 
-	        <div class="col-md-5 col-xs-5">
+	        <div class="col-md-5 col-xs-5 award-wrapper">
 	          <div class="award">
 	            <h2>Our Award</h2>
 	            <img src="<?php bloginfo('template_directory');?>/images/award.png" class="img-responsive">
@@ -59,16 +59,17 @@
 
     <div class="container">
     	<div class="row">
-	        <div class="col-md-8">
+	        <div class="col-md-8 homecontent-wrapper">
 	          <div class="homecontent">
 	            <h2>About Kim Eng Seng Machinery</h2>
 	            <p>Our company has been manufacturing and repairing all kinds of trailers in Singapore. Examples are Skeletal Trailers, Platform Trailers, Low Loader Trailer and all kinds of metal projects. We have more than 30 years experience in this field and we also deal with 2nd hand trailers for export. We have customers from Malaysia, Brunei, Doha and also the Asia Pacific region.</p>
 	          </div>
 	        </div>
 
-	        <div class="col-md-4">
+	        <div class="col-md-4 gallery-wrapper">
 	          <div class="gallery">
 	            <h2>Our Gallery</h2>
+	            <?php echo do_shortcode('[Best_Wordpress_Gallery id="1" gal_title="home-gallery"]'); ?>
 	          </div>
 	        </div>
 	    </div>

@@ -7123,16 +7123,77 @@ td.visible-print {
 
 /**************Custom*******************/
 
-@media (min-width : 960px){
+@media (min-width : 960px) {
   .navbar-header a.navbar-brand{display: none;}
 }
 
-@media (min-width : 768px) and (max-width : 1024px) {
-  .logo{border:1px solid blue;}
-  
+@media (min-width : 968px) and  (max-width : 1024px){
+  .navbar-header a.navbar-brand{display: none;}
+  .logo img{
+  padding-top: 26px;
+  margin-left: 1em!important;
+  }
+
+  .nav nav {
+    margin-left: 0em!important;
+    padding-left: 0px!important;
+    font-size: 13px!important;
+  }
+
+  .homecontent-wrapper,.gallery-wrapper{
+    min-width: 100%!important;
+    display: block;
+  }
+
 }
 
-@media (min-width : 960px) and (max-width : 1024px) {
+@media (min-width : 768px) and (max-width : 968px) {
+  .logo{border:1px solid blue;}  
+
+  .logo img{
+  padding-top: 26px;
+  margin-left: 1em!important;
+  }
+  
+  .navbar {
+
+  }
+
+  .nav nav {
+    background: #fff!important;
+    margin-left: 0em!important;
+    padding-left: 0px!important;
+    font-size: 13px!important;
+  }
+
+  .nav{
+    width: 100%!important;       
+    display: block;
+    position: relative; 
+    margin-top: 10px!important;    
+  }
+
+  .nav nav{margin-top: 0px!important;}
+  .nav li{
+    background: none!important;
+    font-size: 13px!important;
+  }
+
+  .navbar-nav ul.dropdown-menu li {
+    text-align: left!important;
+  }
+
+  .trapezoid-wrapper{
+    min-width: 40%!important; 
+  }
+
+   .award-wrapper{
+    width: 30%!important;
+  }
+
+}
+
+/*@media (min-width : 960px) and (max-width : 1024px) {
   .logo{border:1px solid orange;}
   .logo img{
   padding-top: 26px;
@@ -7148,10 +7209,10 @@ td.visible-print {
 
 @media (min-width : 768px) {
 
-}
+}*/
 
 
-@media (max-width : 768px) {
+/*@media (max-width : 768px) {
   .logo{border:1px solid skyblue;}
   .menu-top-nav-container ul#menu-top-nav li 
   {
@@ -7183,31 +7244,203 @@ td.visible-print {
     position: relative;
   }
 
-}
+}*/
 
 
 @media (min-width : 400px) and (max-width : 768px){
+  .breadcurmb{display: none;}
+  .logo img{
+  padding-top: 26px;
+  margin-left: .5em!important;
+  }
+  .body {
+    margin-top: 70px!important;
+  }
+  .nav{
+    width: 100%!important;
+    background: #fff!important;    
+    display: block;
+    position: relative; 
+    margin-top: 10px!important;    
+  }
+
+  .nav nav{margin-top: 0px!important;background: #ececec;margin-left: 0px!important;}
+  .nav li{
+    background: none!important;
+    font-size: 13px!important;
+  }
+
+  .navbar-nav ul.dropdown-menu li {
+    text-align: left!important;
+  }
+
+  .trapezoid-wrapper{
+    min-width: 40%!important; 
+  }
+
+  .trapezoid ul > li ,#parallelogram ul>li{
+    font-size: 13px!important;
+  }
+  .award-wrapper{
+    width: 30%!important;
+  }
+
+  .footerwrap .footer-about li,.footer-products li{
+    font-size: 12px!important;
+  }
+
+  .social {
+    min-width: 100%!important;
+    display: block!important;
+    float: left!important;
+    position: relative;
+  }
+
   .logo{border:1px solid green;}
   .woocommerce ul.products li.product {min-width: 48%;padding-left: 0px!important;}
-  .woocommerce ul.products li.product img{padding-left: 0px!important;margin-left: 0px!important;min-width: 100%;}
   .woocommerce div.product div.summary,.woocommerce #content div.product div.summary,.woocommerce-page div.product div.summary,.woocommerce-page #content div.product div.summary 
   {
     min-width:100%! important;
     margin-bottom:2em;
   }
 
+  .toprated ul.products li .button-enquiry{
+    text-align: left!important;
+  }
+
+  .toprated ul.products li .button-enquiry .detail {
+    margin-left: 0px!important;
+  }
+
+  .footer-about-wrapper{
+    min-width: 40%!important;
+  }
+
+  .footer-products-wrapper{
+    min-width: 60%!important;
+  }
 }
 
 @media (max-width : 400px){
+  .logo img{
+  padding-top: 35px!important;
+  margin-left: 0px!important;
+  }
+  .quote-wrapper a#festi-cart{
+    padding-left: 0px!important;
+    margin-left: 0px!important;
+    min-height: 50px!important;
+    display: block!important;
+    position: relative;
+    float: left!important;
+    min-width: 100%!important;
+    margin:0 auto;
+  }
+
+  .search-wrapper{
+    min-height: 50px;
+    min-width: 100%!important;
+    display: block!important;
+    margin:0 auto!important;
+    padding-left: 20%;
+    position: relative!important;
+    margin-bottom: 30px!important;
+  }
+
+  .search-wrapper li{
+    min-height: 50px;   
+  }
+
   .slider{display: none;}
+  
+  .breadcurmb{display: none;}
+  
+  .navbar-collapse{padding-left: 0px!important;}
+  .nav{
+    width: 100%!important;
+    background: #fff!important;    
+    display: block;    
+    margin-top: 35px!important;    
+  }
+
+  .nav nav{margin-top: 0px!important;}
+  
+  .nav li{
+    background: none!important;
+    font-size: 13px!important;
+  }
+
+  .navbar-nav ul.dropdown-menu li {
+    text-align: left!important;
+  }
+
+  .navbar-collapse {   
+    overflow-x: hidden!important;    
+  }
+
+  .navbar-collapse.in {
+    overflow-y: hidden!important;
+  }
+
+  .trapezoid-wrapper{
+    min-width: 100%!important;
+    background: none!important;
+  }
+
+  .trapezoid-wrap{
+    background: none!important;
+  }
+
+  .parallelogram-wrapper{
+    min-width: 100%!important;
+    min-height: 150px!important;
+    position: relative;
+    display: block;
+    background: none!important;
+  }
+
+  #parallelogram{
+    margin-left: 0px!important;
+    background: none!important;
+  }
+
+  .award-wrapper{
+    min-width: 100%!important;
+    margin-top: 30px!important;
+  }
+
+  .footer-about-wrapper,.social{
+    min-width: 100%!important;
+  }
+
+  .footer-about-wrapper{
+    min-width: 100%!important;
+    display: block!important;
+    min-height: 100px!important;   
+    position: relative!important;
+  }
+
+  .footer-products-wrapper{
+    min-width: 100%!important;
+    display: block!important;
+    min-height: 300px!important;
+    margin-bottom: 50px!important;
+    position: relative!important;
+  }
+
+
+  .copyright{
+    min-width: 100%!important;    
+    min-height: 50px!important;
+    display: block!important;
+  }
+
   .woocommerce ul.products li.product {min-width: 100%;padding-left: 0px!important;}
   .woocommerce div.product div.summary,.woocommerce #content div.product div.summary,.woocommerce-page div.product div.summary,.woocommerce-page #content div.product div.summary 
   {
     min-width:100%! important;
     margin-bottom:2em;
   }
-
   
-  }
-
 }
+

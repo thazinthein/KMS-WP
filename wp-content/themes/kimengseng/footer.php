@@ -11,7 +11,7 @@
           <div class="container">
             <div class="row">
 
-              <div class="col-md-3">
+              <div class="col-md-3 col-xs-3 footer-about-wrapper">
                 <div class="footer-about">
                   <h3>About</h3>
                   <ul>
@@ -23,10 +23,10 @@
                 </div>
               </div>
 
-              <div class="col-md-6">
+              <div class="col-md-6 col-xs-6 footer-products-wrapper">
                 <div class="footer-products">
                   <h3>Products</h3>
-                    <div class="col-md-6 footermenu">
+                    <div class="col-md-6 col-xs-6 footermenu">
                       <ul>
                         <li>20′ Skeletal</li>
                         <li>40′ Platform (2-axle)</li>
@@ -35,7 +35,7 @@
                         <li>Bogie Axle</li>
                       </ul>
                     </div>
-                    <div class="col-md-6 footermenu">
+                    <div class="col-md-6 col-xs-6 footermenu">
                       <ul>
                         <li>20′ Skeletal</li>
                         <li>40′ Platform (2-axle)</li>
@@ -47,7 +47,7 @@
                 </div>
               </div>
 
-              <div class="col-md-3">
+              <div class="col-md-3 social-wrapper">
                 <div class="social">
                   <ul>
                     <li><img src="<?php bloginfo('template_directory');?>/images/facebook.png"></li>
