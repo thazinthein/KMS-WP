@@ -17,15 +17,28 @@
 	
 	<!-- concatenate and minify for production -->
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/reset.css" />
-	
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">     
     <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.png">   
-    <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" rel="stylesheet">   
+    <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" rel="stylesheet">
+    
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" /> 
    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
    	<script src="<?php bloginfo('template_url'); ?>/js/jquery-1.11.0.min.js"></script>
+
+   	<script type="text/javascript">
+	    $( "li.menu-item" ).hover(function() {  // mouse enter
+		  	$( this ).find( ".dropdown-menu" ).show(); // display child
+
+		}, function(){ // mouse leave
+		    if ( !$(this).hasClass("current_page_item") ) {  // check if current page
+		        $( this ).find( ".dropdown-menu" ).hide(); // hide if not current page
+		    }
+		});
+    </script>
+
 
 	<?php wp_head(); ?>
 	

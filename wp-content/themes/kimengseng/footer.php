@@ -87,6 +87,8 @@
 <script>window.jQuery || document.write('<script src="<?php bloginfo('template_directory'); ?>/js/jquery.min.js"><\/script>');</script>
 <script src="<?php bloginfo('template_directory'); ?>/js/modernizr.custom.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/modernizr.min.js"></script>
+<!--<script src="<?php bloginfo('template_directory'); ?>/js/animate-waypoints.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/waypoints.min.js"></script>-->
 <!-- Asynchronous google analytics; this is the official snippet.
          Replace UA-XXXXXX-XX with your site's ID and domainname.com with your domain, then uncomment to enable.
 

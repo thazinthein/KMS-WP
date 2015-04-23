@@ -34,7 +34,7 @@ $woocommerce_loop['loop']++;
 	?>">
 
 	<?php do_action( 'woocommerce_before_subcategory', $category ); ?>
-
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 	<a href="<?php echo get_term_link( $category->slug, 'product_cat' ); ?>">
 
 		<?php
@@ -46,14 +46,27 @@ $woocommerce_loop['loop']++;
 			do_action( 'woocommerce_before_subcategory_title', $category );
 		?>
 
-		<h3>
-			<?php
-				echo $category->name;
+		<div class="products-content products-catego">
+		<!--	<img src="<?php bloginfo('template_directory');?>/images/products-logo.png" class="products-logo">-->
 
-				if ( $category->count > 0 )
-					echo apply_filters( 'woocommerce_subcategory_count_html', ' <mark class="count">(' . $category->count . ')</mark>', $category );
-			?>
-		</h3>
+				<div class="flip-container-wrapper">
+					  <div class="flipper">
+					    <div class="front">
+					      <img src="<?php bloginfo('template_directory');?>/images/products-logo.png" class="products-logo">
+					    </div>
+					    <div class="back">
+					      <img src="<?php bloginfo('template_directory');?>/images/products-logo.png" class="products-logo">
+					    </div>
+					  </div>
+				</div>
+
+			<h3>
+				<?php echo $category->name;?>
+			</h3>
+
+		</div>
+
+		
 
 		<?php
 			/**
@@ -63,7 +76,7 @@ $woocommerce_loop['loop']++;
 		?>
 
 	</a>
-
+	</div>
 	<?php do_action( 'woocommerce_after_subcategory', $category ); ?>
 
 </li>

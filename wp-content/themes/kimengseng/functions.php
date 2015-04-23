@@ -489,13 +489,18 @@ class ik_walker extends Walker_Nav_Menu{
     $item_output .= $args->after;
  
     $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+
+
   }
 }
 
 // Register Custom Navigation Walker
 require_once('wp_bootstrap_navwalker.php');
 register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'goldenworld' ),
+    'primary' => __( 'Primary Menu', 'kimengseng' ),
 ) );
+
+
+
 
 ?>

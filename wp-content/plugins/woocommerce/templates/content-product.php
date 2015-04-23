@@ -41,7 +41,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 <li <?php post_class( $classes ); ?>>
 
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
-
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 	<a href="<?php the_permalink(); ?>">
 
 		<?php
@@ -56,7 +56,20 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 	</a>
 
 	<div class="products-content">
-		<img src="../wp-content/themes/kimengseng/images/products-logo.png" class="products-logo">
+		<!--<img src="<?php bloginfo('template_directory');?>/images/products-logo.png" class="products-logo">-->
+		
+	              	<div class="flip-container-wrapper">
+					  <div class="flipper">
+					    <div class="front">
+					      <img src="<?php bloginfo('template_directory');?>/images/products-logo.png" class="products-logo">
+					    </div>
+					    <div class="back">
+					      <img src="<?php bloginfo('template_directory');?>/images/products-logo.png" class="products-logo">
+					    </div>
+					  </div>
+					</div>
+					
+	              
 		<a href="<?php the_permalink(); ?>">
 			<h2><?php the_title(); ?></h2>
 
@@ -78,5 +91,6 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 				<?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
 		</div>
 
+	</div>
 	</div>
 </li>

@@ -16,6 +16,9 @@ Template Name: Services
 
       <div class="col-md-9 rightnopadding">       
             <div class="pagebox">
+              <h2 class="categ-head"><?php the_title(); ?></h2>
+              <?php $id =9; $page_data = get_page($id);?>                                                              
+              <?php $post = get_page($id); $content = apply_filters('the_content', $post->post_content); echo $content; ?>
 
             </div>
       </div>
