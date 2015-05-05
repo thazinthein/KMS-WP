@@ -5,6 +5,8 @@
  * @since HTML5 Reset 2.0
  */
  get_header(); ?>
+<div class="pageheaderbg">
+</div>
 <div class="body container">
 	<div class="row">
 

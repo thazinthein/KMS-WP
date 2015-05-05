@@ -14,15 +14,17 @@
       	<div class="row">
 
 	        <div class="col-md-12">
-		        <div class="parallelogram-img">
-			        
-			        	<img src="<?php bloginfo('template_directory');?>/images/parallelogram.png" class="img-responsive">
-			          <!--<div class="parallelogram-img-content">
+		        <div class="parallelogram-img animate-waypoint" data-animation="moveUp slow">
+			        <div class="col-md-7"></div>
+			        	<!--<img src="<?php bloginfo('template_directory');?>/images/parallelogram.png" class="img-responsive">-->
+			        <div class="col-md-5 parallelogram-grey-wrapperrr">
+			          <div class="parallelogram-img-content parallelogram-greyyyy">
 			          	<h2>Kim Eng Seng Machinery</h2>
 			          	<div class="callservices">Require our services? Call us now!</div>
 			          	<div class="phoneno">(+65) 6261 2867</div>
 			          	<div class="phoneno">(+65) 6261 4369</div>
-			          </div>-->
+			        	</div>
+			        </div>
 			       
 		        </div>
 	    	</div>
@@ -82,7 +84,7 @@
 	        <div class="col-md-4 gallery-wrapper">
 	          <div class="gallery">
 	            <h2>Our Gallery</h2>
-	            <?php echo do_shortcode('[Best_Wordpress_Gallery id="1" gal_title="home-gallery"]'); ?>
+	            <?php echo do_shortcode('[Best_Wordpress_Gallery id="8" gal_title="home-gallery"]'); ?>
 	          </div>
 	        </div>
 	    </div>

@@ -22,10 +22,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">     
     <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.png">   
     <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php bloginfo('template_url'); ?>/css/waypoint.css" rel="stylesheet">
     
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" /> 
-   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   	
    	<script src="<?php bloginfo('template_url'); ?>/js/jquery-1.11.0.min.js"></script>
 
    	<script type="text/javascript">

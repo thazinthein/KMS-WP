@@ -7153,6 +7153,17 @@ td.visible-print {
     width: 30%!important;
   }
 
+  .parallelogram-img .parallelogram-img-content{
+    float: right!important;
+    margin-left: 20px;
+    position: relative;
+    right: 0px;
+    border:1px solid red;
+  }
+
+  .parallelogram-img .parallelogram-img-content h2{
+    font-size: 18px!important;
+  }
 }
 
 @media (min-width : 768px) and (max-width : 968px) {
@@ -7202,6 +7213,8 @@ td.visible-print {
   .products-read-more{
     margin-top: 0px!important;   
   }
+
+
 }
 
 /*@media (min-width : 960px) and (max-width : 1024px) {
@@ -7308,6 +7321,15 @@ td.visible-print {
   }
 
   .logo{border:1px solid green;}
+  .parallelogram-img{
+    min-width: 100%!important;
+    display: block!important;
+    position: relative;
+    border-radius: 5px;
+    background: #dedede!important;
+    margin-top: 20px;
+    text-align: center!important;
+  }
   .woocommerce ul.products li.product {min-width: 48%;padding-left: 0px!important;}
   .woocommerce div.product div.summary,.woocommerce #content div.product div.summary,.woocommerce-page div.product div.summary,.woocommerce-page #content div.product div.summary 
   {

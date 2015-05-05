@@ -4,6 +4,8 @@ Template Name: Profile
 */
 ?>
 <?php get_header();  ?>
+<div class="pageheaderbg">
+</div>
 <div class="body container">
   <div class="row">
 
